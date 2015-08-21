@@ -1,53 +1,25 @@
 # Test-change-tests
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+Currently seeing a problem with running tests for Ember Observer, running on Ember 2.0, Ember Data 2.0 and ember-cli 1.13.8. This repo is a recreation of this bug.
 
-## Prerequisites
+Successfully seen with:
 
-You will need the following things properly installed on your computer.
+- Ember 1.13.8
+- No ember-data
+- ember-cli 1.13.8
 
-* [Git](http://git-scm.com/)
-* [Node.js](http://nodejs.org/) (with NPM)
-* [Bower](http://bower.io/)
-* [Ember CLI](http://www.ember-cli.com/)
-* [PhantomJS](http://phantomjs.org/)
+node 0.12.7
+mac osx 10.10.4
 
-## Installation
+To see, run tests in a browser either through `http://localhost:4200/tests` or through `ember test -s`, then change the `thing-test` acceptance test file (I've been toggling commenting `assert.ok(true)`. Tests fail with:
 
-* `git clone <repository-url>` this repository
-* change into the new directory
-* `npm install`
-* `bower install`
+```
+Uncaught TypeError: Cannot read property 'default' of undefined
 
-## Running / Development
+at require (http://localhost:7357/assets/test-loader.js:29:16)
+    	at loadModules (http://localhost:7357/assets/test-loader.js:21:25)
+    	at load (http://localhost:7357/assets/test-loader.js:40:35)
+    	at http://localhost:7357/assets/test-support.js:6647:20: Can't find variable: visit
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
-
-### Building
-
-* `ember build` (development)
-* `ember build --environment production` (production)
-
-### Deploying
-
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+    ✘ afterEach failed on visiting /thing: undefined is not an object (evaluating 'target[method]')
+```
