@@ -44,3 +44,5 @@ at require (http://localhost:7357/assets/test-loader.js:29:16)
 
     ✘ afterEach failed on visiting /thing: undefined is not an object (evaluating 'target[method]')
 ```
+
+If you instead change something in the app (try index.hbs), the tests will live reload but all tests other than jshint will be missing.
