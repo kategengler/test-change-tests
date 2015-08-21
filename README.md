@@ -8,6 +8,14 @@ Successfully seen with:
 - No ember-data
 - ember-cli 1.13.8
 
+- Ember 1.13.8
+- No ember-data
+- ember-cli master
+
+- Ember 2.0.0
+- ember-data 2.0.0
+- ember-cli 1.13.8
+
 on: 
 
 - 2013 MacBook Pro
