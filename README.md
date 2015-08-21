@@ -4,13 +4,16 @@ Currently seeing a problem with running tests for Ember Observer, running on Emb
 
 Successfully seen with:
 
-- Ember 1.13.8
+- Ember 1.13.7
 - No ember-data
 - ember-cli 1.13.8
 
-- Ember 1.13.8
+
+- Ember 1.13.7
 - No ember-data
 - ember-cli master
+
+-- Current setup in this app --
 
 - Ember 2.0.0
 - ember-data 2.0.0
@@ -23,12 +26,13 @@ on:
 - node 0.12.7
 - mac osx 10.10.4
 
+
 - 2012 MacBook Air
 - NodeWatcher
 - node 0.12.0
 - mac osx 10.10.3
 
-To see, run tests in a browser either through `http://localhost:4200/tests` or through `ember test -s`, then change the `thing-test` acceptance test file (I've been toggling commenting `assert.ok(true)`. Tests fail with:
+To see, run tests in a browser either through `http://localhost:4200/tests` or through `ember test -s`, see the tests pass, then change the `thing-test` acceptance test file in any way (I've been toggling commenting `assert.ok(true)` or changing a test title). Tests fail with:
 
 ```
 Uncaught TypeError: Cannot read property 'default' of undefined
