@@ -13,10 +13,20 @@ Successfully seen with:
 - No ember-data
 - ember-cli master
 
+ 
+- Ember 2.0.0
+- ember-data 2.0.0
+- ember-cli 1.13.8
+
+
+- Ember 2.0.0
+- ember-data none
+- ember-cli 1.13.7
+
 -- Current setup in this app --
 
 - Ember 2.0.0
-- ember-data 2.0.0
+- ember-data none
 - ember-cli 1.13.8
 
 on: 
